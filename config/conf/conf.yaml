@@ -1,3 +1,5 @@
+runmode: debug
+
 db:
   name: bluebell
   addr: 192.168.28.173:3305

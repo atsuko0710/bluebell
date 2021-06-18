@@ -2,9 +2,12 @@ package main
 
 import (
 	"bluebell/config"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
 )
 
 var (
@@ -19,8 +22,18 @@ func main() {
 	}
 
 	// 初始化数据库
+	config.DB.InitDb()
+	defer config.DB.Close()
 
-	r := gin.Default()
+	gin.SetMode(viper.GetString("runmode"))
 
-	r.Run()
+	g := gin.New()
+
+	// route.Load(
+	// 	// Cores.
+	// 	g,
+	// )
+
+	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
+	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
