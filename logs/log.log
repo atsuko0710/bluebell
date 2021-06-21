@@ -1,0 +1,13 @@
+{"level":"ERROR","timestamp":"2021-06-21 23:00:31.255","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 192.168.28.173:3305: connect: operation timed out"}}
+{"level":"INFO","timestamp":"2021-06-21 23:00:31.255","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: "}
+{"level":"ERROR","timestamp":"2021-06-21 23:01:17.851","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 127.0.0.1:3305: connect: connection refused"}}
+{"level":"INFO","timestamp":"2021-06-21 23:01:17.852","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: "}
+{"level":"ERROR","timestamp":"2021-06-21 23:02:27.834","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 192.168.0.104:3305: connect: connection refused"}}
+{"level":"INFO","timestamp":"2021-06-21 23:02:27.834","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: "}
+{"level":"ERROR","timestamp":"2021-06-21 23:04:08.081","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 192.168.0.104:3305: connect: connection refused"}}
+{"level":"INFO","timestamp":"2021-06-21 23:04:08.081","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"ERROR","timestamp":"2021-06-21 23:04:38.347","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 127.0.0.1:3305: connect: connection refused"}}
+{"level":"INFO","timestamp":"2021-06-21 23:04:38.348","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"ERROR","timestamp":"2021-06-21 23:04:51.335","file":"config/db.go:41","msg":"Database connection failed. Database name: bluebell","data":{"error":"dial tcp 127.0.0.1:3305: connect: connection refused"}}
+{"level":"INFO","timestamp":"2021-06-21 23:04:51.335","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2021-06-21 23:05:50.014","file":"cmd/main.go:37","msg":"Start to listening the incoming requests on http address: :8080"}

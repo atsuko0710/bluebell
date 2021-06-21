@@ -2,6 +2,7 @@ package main
 
 import (
 	"bluebell/config"
+	"bluebell/internal/router"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -29,10 +30,9 @@ func main() {
 
 	g := gin.New()
 
-	// route.Load(
-	// 	// Cores.
-	// 	g,
-	// )
+	router.Load(
+		g,
+	)
 
 	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
