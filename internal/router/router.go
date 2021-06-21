@@ -22,7 +22,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	})
 
 	// 注册路由
-	g.POST("/register", handler.Register)
+	g.POST("/register", handler.RegisterHandler)
 
 	return g
 }
