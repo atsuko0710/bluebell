@@ -24,3 +24,7 @@ func CheckUserExist(username string) bool {
 func CreateUser(u models.UserModel) error {
 	return models.Create(u)
 }
+
+func GetUser(username string)  {
+	// user, err := models.GetUserByName(username)
+}

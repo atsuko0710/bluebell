@@ -16,4 +16,5 @@ require (
 	github.com/onsi/gomega v1.13.0 // indirect
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.8.0
+	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 )

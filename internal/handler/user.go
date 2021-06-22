@@ -10,10 +10,8 @@ import (
 )
 
 func RegisterHandler(c *gin.Context) {
-
 	var r CreateRequest
 	if err := c.Bind(&r); err != nil {
-
 		// 判断错误是不是 validator.ValidationErrors 类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
@@ -25,4 +23,13 @@ func RegisterHandler(c *gin.Context) {
 		return
 	}
 	SendResponse(c, service.Register(r), nil)
+}
+
+func LoginHandler(c *gin.Context) {
+	var r LoginRequest
+	if err := c.Bind(&r); err != nil {
+		SendResponse(c, errno.ErrBind, nil)
+		return
+	}
+	
 }

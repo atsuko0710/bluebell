@@ -7,3 +7,8 @@ type CreateRequest struct {
 	Email string `json:"email" binding:"required,email"`
 	Gender int `json:"gender"`
 }
+
+type LoginRequest struct {
+	Username string `json:"username" binding:"required"`
+	Password string `json:"password" binding:"required"`
+}
