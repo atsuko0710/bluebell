@@ -2,6 +2,7 @@ package main
 
 import (
 	"bluebell/config"
+	"bluebell/internal/handler"
 	"bluebell/internal/router"
 	"net/http"
 
@@ -25,6 +26,11 @@ func main() {
 	// 初始化数据库
 	config.DB.InitDb()
 	defer config.DB.Close()
+
+	// 初始化验证器的翻译器
+	if err := handler.InitTrans("zh"); err != nil {
+		panic(err)
+	}
 
 	gin.SetMode(viper.GetString("runmode"))
 

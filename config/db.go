@@ -10,20 +10,22 @@ import (
 )
 
 type Database struct {
-	DB *gorm.DB
+	Self *gorm.DB
 }
 
 var DB *Database
 
-func (db *Database) InitDb() *gorm.DB {
-	return openDB(viper.GetString("db.username"),
+func (db *Database) InitDb() {
+	DB = &Database{
+		Self: openDB(viper.GetString("db.username"),
 		viper.GetString("db.password"),
 		viper.GetString("db.addr"),
-		viper.GetString("db.name"))
+		viper.GetString("db.name")),
+	}
 }
 
 func (db *Database) Close() {
-	DB.Close()
+	DB.Self.Close()
 }
 
 func openDB(username, password, addr, name string) *gorm.DB {

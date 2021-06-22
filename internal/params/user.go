@@ -1,8 +1,9 @@
 package params
 
 type CreateRequest struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
-	RePassword string `json:"re_password"`
-	Email string `json:"email"`
+	Username string `json:"username" binding:"required"`
+	Password string `json:"password" binding:"required"`
+	RePassword string `json:"re_password" binding:"required,eqfield=Password"`
+	Email string `json:"email" binding:"required,email"`
+	Gender int `json:"gender"`
 }
