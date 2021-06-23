@@ -13,7 +13,7 @@ var (
 	// user errors
 	ErrUserNotFound      = &Errno{Code: 20102, Message: "没有找到该用户"}
 	ErrEncrypt           = &Errno{Code: 20101, Message: "Error occurred while encrypting the user password"}
-	ErrTokenInvalid      = &Errno{Code: 20103, Message: "The token was invalid."}
+	ErrTokenInvalid      = &Errno{Code: 20103, Message: "token 不正确"}
 	ErrPasswordIncorrect = &Errno{Code: 20104, Message: "密码不正确"}
 	ErrUserNameExist     = &Errno{Code: 20105, Message: "用户名已存在"}
 	ErrCreateUser        = &Errno{Code: 20106, Message: "创建用户失败"}

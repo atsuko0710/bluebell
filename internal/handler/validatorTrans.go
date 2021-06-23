@@ -27,7 +27,6 @@ func InitTrans(locale string) (err error) {
 
 		// 第一个参数是备用（fallback）的语言环境
 		// 后面的参数是应该支持的语言环境（支持多个）
-		// uni := ut.New(zhT, zhT) 也是可以的
 		uni := ut.New(enT, zhT, enT)
 
 		// locale 通常取决于 http 请求头的 'Accept-Language'
