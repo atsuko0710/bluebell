@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"bluebell/internal/params"
 	. "bluebell/internal/params"
 	"bluebell/internal/service"
 	"bluebell/pkg/errno"
@@ -30,6 +31,13 @@ func LoginHandler(c *gin.Context) {
 	if err := c.Bind(&r); err != nil {
 		SendResponse(c, errno.ErrBind, nil)
 		return
+	}
+
+	err, token := service.Login(r)
+	if token != "" {
+		SendResponse(c, err, params.Token{Token: token})
+	} else {
+		SendResponse(c, err, token)
 	}
 	
 }

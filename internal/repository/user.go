@@ -25,6 +25,10 @@ func CreateUser(u models.UserModel) error {
 	return models.Create(u)
 }
 
-func GetUser(username string)  {
-	// user, err := models.GetUserByName(username)
+func GetUser(username string) (bool, models.UserModel) {
+	user, err := models.GetUserByName(username)
+	if err != nil {
+		return false, models.UserModel{}
+	}
+	return true, *user
 }

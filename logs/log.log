@@ -1,0 +1,3 @@
+{"level":"INFO","timestamp":"2021-06-23 10:46:40.884","file":"cmd/main.go:43","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2021-06-23 10:49:13.426","file":"cmd/main.go:43","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2021-06-23 10:50:41.767","file":"cmd/main.go:43","msg":"Start to listening the incoming requests on http address: :8080"}
